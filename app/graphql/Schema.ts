@@ -5,10 +5,10 @@ const Schema = gql`
     id: ID!
     name: String
   }
-  #handle user commands
+
   type Query {
-    getAllPeople: [Person]
-    getPerson(id: Int): Person
+    getAllZipCodes: [Person]
+    getZipCode(id: String!): Person
 }
 `;
 

@@ -2,8 +2,8 @@ import people from "../data/dataset";
 
 const Resolvers = {
     Query: {
-        getAllPeople: () => people,
-        getPerson: (_: any, args: any) => {
+        getAllZipCodes: () => people,
+        getZipCode: (_: any, args: any) => {
             console.log(args);
             return people.find((person) => person.id === args.id);
         },
