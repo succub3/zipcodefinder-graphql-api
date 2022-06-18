@@ -1,4 +1,5 @@
 import { gql } from "apollo-server-express";
+
 const Schema = gql`
   type Person {
     id: ID!

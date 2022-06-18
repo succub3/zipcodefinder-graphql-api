@@ -1,6 +1,6 @@
 import { ApolloServer } from "apollo-server-express";
-import Schema from "./Schema";
-import Resolvers from "./Resolvers";
+import Schema from "./graphql/Schema";
+import Resolvers from "./graphql/Resolvers";
 import express from "express";
 import { ApolloServerPluginDrainHttpServer } from "apollo-server-core";
 import http from "http";

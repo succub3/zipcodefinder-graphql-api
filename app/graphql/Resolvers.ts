@@ -1,4 +1,5 @@
-import people from "./dataset";
+import people from "../data/dataset";
+
 const Resolvers = {
     Query: {
         getAllPeople: () => people,
