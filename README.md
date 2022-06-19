@@ -1,18 +1,33 @@
 Go to: `localhost:4000/graphql`:
 ```
-query {
-  getAllZipCodes {
-    id
-    name
+query GetZipCodeInfo($countryCode: String!, $zipCode: String!) {
+  getZipCodeInfo(countryCode: $countryCode, zipCode: $zipCode) {
+    zipCode
+    countryCode
+    country
+    places {
+      locationName
+      stateCode
+      state
+      longitude
+      latitude
+    }
   }
 }
 ```
 ```
-query ($zipCode: String!) {
-  getZipCode(id: 1) {
-    id
-    name
+query GetZipCodeInfo($countryCode: String!, $zipCode: String!) {
+  getZipCodeInfo(countryCode: "US", zipCode: "90210") {
+    zipCode
+    countryCode
+    country
+    places {
+      locationName
+      stateCode
+      state
+      longitude
+      latitude
+    }
   }
 }
-
 ```
