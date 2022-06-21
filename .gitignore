@@ -6,6 +6,9 @@
 # production
 /dist
 
+# test
+/coverage
+
 # IDEs
 .vscode
 .idea

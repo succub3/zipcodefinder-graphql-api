@@ -5,7 +5,6 @@ import { getMockedZipCodeInfo, getZipCodeInfo } from "../zippopotam/service/zipp
 const Resolvers = {
     Query: {
         getZipCodeInfo: async (_: any, args: any) => {
-            console.log(args);
             if ((process.env.USE_MOCK_DATA ?? "false").toLowerCase() === "true") {
                 return getMockedZipCodeInfo(args.countryCode, args.postalCode);
             } else {
