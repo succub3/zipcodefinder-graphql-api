@@ -1,27 +1,26 @@
+# Setup
+## Download and install Node.js (14+)
+`https://nodejs.org/en/download/`
+
+## Install yarn (globally)
+```
+npm install -g yarn
+```
+
+## Run
+```
+yarn start
+```
+
+## To manually run GraphQL command
 Go to: `localhost:4000/graphql`:
 ```
-query GetZipCodeInfo($countryCode: String!, $zipCode: String!) {
-  getZipCodeInfo(countryCode: $countryCode, zipCode: $zipCode) {
+query getZipCodeInfo($countryCode: String!, $postalCode: String!) {
+  getZipCodeInfo(countryCode: "US", postalCode: "90210") {
     zipCode
     countryCode
     country
-    places {
-      locationName
-      stateCode
-      state
-      longitude
-      latitude
-    }
-  }
-}
-```
-```
-query GetZipCodeInfo($countryCode: String!, $zipCode: String!) {
-  getZipCodeInfo(countryCode: "US", zipCode: "90210") {
-    zipCode
-    countryCode
-    country
-    places {
+    locations {
       locationName
       stateCode
       state
