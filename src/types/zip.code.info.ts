@@ -4,5 +4,5 @@ export interface ZipCodeInfo {
   zipCode: string;
   country: string;
   countryCode: string;
-  places: Location[];
+  locations: Location[];
 }

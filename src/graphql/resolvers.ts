@@ -7,9 +7,9 @@ const Resolvers = {
         getZipCodeInfo: async (_: any, args: any) => {
             console.log(args);
             if ((process.env.USE_MOCK_DATA ?? "false").toLowerCase() === "true") {
-                return getMockedZipCodeInfo(args.countryCode, args.zipCode);
+                return getMockedZipCodeInfo(args.countryCode, args.postalCode);
             } else {
-                return getZipCodeInfo(args.countryCode, args.zipCode);
+                return getZipCodeInfo(args.countryCode, args.postalCode);
             }
         },
     },

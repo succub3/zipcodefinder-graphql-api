@@ -18,6 +18,6 @@ export function convertRegionToZipCodeInfo(region: Region): ZipCodeInfo {
     zipCode: region["post code"],
     country: region.country,
     countryCode: region["country abbreviation"],
-    places: region.places.map((place) => convertPlaceToLocation(place)),
+    locations: region.places.map((place) => convertPlaceToLocation(place)),
   };
 }

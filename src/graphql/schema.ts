@@ -5,7 +5,7 @@ const Schema = gql`
     zipCode: ID!
     country: String!
     countryCode: String!
-    places: [Location!]
+    locations: [Location!]
   }
   type Location {
     locationName: String!
@@ -16,7 +16,7 @@ const Schema = gql`
   }
 
   type Query {
-    getZipCodeInfo(countryCode: String!, zipCode: String!): ZipCodeInfo
+    getZipCodeInfo(countryCode: String!, postalCode: String!): ZipCodeInfo
 }
 `;
 
