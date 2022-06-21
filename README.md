@@ -1,6 +1,6 @@
 # Setup
 ## Download and install Node.js (14+)
-`https://nodejs.org/en/download/`
+https://nodejs.org/en/download/
 
 ## Install yarn (globally)
 ```
